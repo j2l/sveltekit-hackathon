@@ -1,4 +1,4 @@
-export let content = ` (This is the README.md file. This file is a hack too, md seen as JS!)
+export let content = ` (This README.md file is a hack too, md can be seen as a JS object by Svelte!)
 
 # THIS IS NOT READY YET!!
 I publish it to get some help
@@ -52,13 +52,13 @@ If you have other faster solutions, feel free to PR.
 Visit https://supabase.io
 You need to create a free account, an org, a project, and 2 tables within this project.
 
-Once created, your project has an URL identifier, <urlofyourproject>, like mmmkjtghrmfhxfmkjh.
+Once created, your project has an URL identifier, \<urlofyourproject\>, like mmmkjtghrmfhxfmkjh.
 
-Get your public anonymous key and URL from https://app.supabase.io/project/<urlofyourproject>/settings/api
+Get your public anonymous key and URL from https://app.supabase.io/project/\<urlofyourproject\>/settings/api
 
 The public table is a basic table with at least 2 columns : \`permalink\` and \`name\`
 
-The user table is a table where user can only see their inputs (a row belongs to one user), it's made from the Quick Start > Todo List at https://app.supabase.io/project/<urlofyourproject>/editor/sql 
+The user table is a table where user can only see their inputs (a row belongs to one user), it's made from the Quick Start > Todo List at https://app.supabase.io/project/\<urlofyourproject\>/editor/sql 
 
 ## Read the doc
 https://kit.svelte.dev/docs
@@ -85,9 +85,15 @@ npm run build
 You can preview the built app with \`npm run preview\`, regardless of whether you installed an adapter.
 `
 # More!
-This project is based on wonderful work from:
-- https://svelte.dev
-- https://supabase.io
+Learn and add your hacks as PR (Pull Request) for this project
+
+This project is based on wonderful open source work from:
+- https://svelte.dev (Javascript framework)
+- https://supabase.io (Open Source Firebase alternative)
 - https://github.com/joshnuss/ (svelte <-> supabase)
+- https://bulma.io/ (CSS + SASS engine)
+- fontawesome-free (come on, you know these fonts)
+- https://github.com/markedjs/marked (fast markdown parser)
 - and others
-Feel free to visit, learn and add your hacks as PR (Pull Request) for this project
+
+Please visit them!
