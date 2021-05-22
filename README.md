@@ -5,7 +5,7 @@ I publish it to get some help
 
 # Sveltekit Hackathon based on SvelteKit Demo App with Auth and 2 Supabase tables
 
-Everything you need to build a Svelte project, powered by [\`create-svelte\`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Everything you need to build a Svelte project, powered by [\`SvelteKit\`](https://github.com/sveltejs/kit/);
 
 ## Creating a local hackathon project
 
@@ -48,7 +48,7 @@ I found Bulma is the most simple and fastest way to make it within svelte compon
 
 If you have other faster solutions, feel free to PR.
 
-# Supabase
+## Supabase
 Visit https://supabase.io
 You need to create a free account, an org, a project, and 2 tables within this project.
 
@@ -76,14 +76,13 @@ Endpoints run only on the server (or when you build your site, if prerendering).
 Endpoints are modules written in .js (or .ts) files that \`export\` functions.
 
 ## Building it to host it
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment
 
-\`\`\`bash
-npm run build
-\`\`\`
+Adapt svelte.config.js accordingly (check github readme for each adapter). Then:
+\`npm run build\`
 
 You can preview the built app with \`npm run preview\`, regardless of whether you installed an adapter.
-`
+
 # More!
 Learn and add your hacks as PR (Pull Request) for this project
 
@@ -97,3 +96,4 @@ This project is based on wonderful open source work from:
 - and others
 
 Please visit them!
+`

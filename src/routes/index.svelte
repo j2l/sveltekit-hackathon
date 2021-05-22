@@ -1,18 +1,14 @@
 <script context="module" lang="ts">
 	export const prerender = true;
 	import { createClient } from '@supabase/supabase-js'
-	import {appName, publictable} from '$lib/Env.js';
-	export const supabase = createClient(
-		import.meta.env.VITE_SUPABASE_URL,
-		import.meta.env.VITE_SUPABASE_ANON_KEY
-	)
+	import {appName} from '$lib/Env.js';
+	import db from '$lib/db';
 	
 	// load table from db
 	export async function load() {
-		const { data } = await supabase.from(publictable).select('*')
 		return { 
 			props: {
-				data
+				publicTable: await db.publicTable.all()
 			}
 		}
 	}
@@ -21,7 +17,7 @@
 <script lang="ts">
 	import Counter from '$lib/Counter/index.svelte';
 	// import {appName} from '$lib/Env.js';
-	export let data;
+	export let publicTable;
 </script>
 
 <svelte:head>
@@ -40,8 +36,8 @@
 		<div class="bd-notification is-primary title">	to {appName}</div>
 		</div>
 	</h1>
-	<p>There are {data.length} items in the public table (.env).</p>
-	{#each data as item}
+	<p>There are {publicTable.length} items in the public table (.env).</p>
+	{#each publicTable as item}
   <article>
     <a href="/item/{item.permalink}">{item.name}</a>
   </article>

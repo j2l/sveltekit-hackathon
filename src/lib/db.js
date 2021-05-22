@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import {publictable} from '$lib/Env.js';
 import { readable } from 'svelte/store'
 
 export const supabase = createClient(
@@ -18,16 +19,15 @@ export const auth = supabase.auth
 
 // TODO: add your queries/inserts/updates/deletes here
 export default {
-  table: {
+  publicTable: {
     async all(options = {}) {
-      const { data } = await supabase.from(import.meta.env.VITE_SUPABASE_TABLE).select('*')
+      const { data } = await supabase.from(publictable).select('*')
 
       return data
     },
-
     async find(permalink) {
       const { data } = await supabase
-        .from(import.meta.env.VITE_SUPABASE_TABLE)
+        .from(publictable)
         .select('*')
         .match({permalink})
         .single()
